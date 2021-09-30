@@ -100,7 +100,6 @@ public class MainActivity extends AppCompatActivity {
         parseLiveQueryClient = ParseLiveQueryClient.Factory.getClient();
         ParseQuery<ParseObject> parseQuery = new ParseQuery<>("Message");
         subscriptionHandling = parseLiveQueryClient.subscribe(parseQuery);
-
         subscriptionHandling.handleSubscribe(query -> {
             initLiveQuery();
         });
